@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="./script.js" defer></script>
+    <nav>
+        <a href="./dashboard.html">
+            <img src="./assets/Home.svg" alt="Dashboard icon">
+        </a>
+        <a href="mailto:patrik.mandic@student.uniri.hr">
+            <img src="./assets/User_fill.svg" alt="User icon">
+        </a>
+        <a href="https://inf.uniri.hr/">
+            <img src="./assets/globe.svg" alt="Globe icon">
+        </a>
+        <a href="./index.html">
+            <img src="./assets/Sign_out_squre.svg" alt="Index icon">
+        </a>
+    </nav>
+    <div style="flex-grow: 1;">
+        <h1>Dobrodošli na web aplikaciju!</h1>
+        <main>
+            <div class="popis">
+                <div class="row">
+                    <h2>Popis studenata</h2>
+                    <label class="pretrazi">
+                        Pretraži
+                        <input type="text" name="search" id="search" onchange="searchTable(this)">
+                    </label>
+                </div>
+                <div class="container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ime</th>
+                                <th>Prezime</th>
+                                <th>Akcije</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="dodaj">
+                <h2>Dodaj novog studenta</h2>
+                <div class="container">
+                    <form onsubmit="event.preventDefault(); addEntry()">
+                        <label for="ime">
+                            Ime
+                            <input type="text" id="ime" name="ime">
+                        </label>
+                        <label for="ime">
+                            Prezime
+                            <input type="text" id="prezime" name="preime">
+                        </label>
+                        <input type="submit" value="Dodaj" />
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="modal" style="display: none;">
+        <div class="container">
+            <button onclick="closeModal()">x</button>
+            <h2>Uređivanje podataka</h2>
+            <form onsubmit="event.preventDefault(); saveChanges()">
+                <label class="uredi-ime">
+                    Ime
+                    <input type="text" name="uredi-ime" id="uredi-ime">
+                </label>
+                <label class="uredi-prezime">
+                    Prezime
+                    <input type="text" name="uredi-prezime" id="uredi-prezime">
+                </label>
+                <input type="submit" value="Spremi promjene">
+            </form> 
+        </div>
+    </div>
+</body>
+</html>

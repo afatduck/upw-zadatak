@@ -1,0 +1,203 @@
+:root {
+    --main-color: #294B79;
+}
+
+body {
+    background-image: url('./assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+input {
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+
+label {
+    display: block;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+#prijava {
+    margin: 0 auto;
+    height: 550px;
+    width: 600px;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+#prijava h2 {
+    text-align: center;
+    margin: 0;
+}
+
+#prijava img {
+    width: 300px;
+    align-self: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #0000001a;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px 0;
+    height: auto;
+}
+
+nav {
+    width: 50px;
+    background-color: var(--main-color);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-right: 150px;
+}
+
+main {
+    display: flex;
+    gap: 110px;
+    margin-right: 110px;
+}
+
+.popis {
+    width: 60%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row label {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.row input {
+    width: 150px;
+}
+
+.dodaj {
+    flex-grow: 1;
+}
+
+.dodaj input[type="submit"], .modal input[type="submit"] {
+    width: 150px;
+}
+
+.dodaj .container {
+    padding: 15px 25px;
+}
+
+.popis > .container {
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table button {
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-image: url('./assets/Edit_fill.svg');
+}
+
+.delete-button {
+    background-image: url('./assets/Trash.svg');
+}
+
+th:nth-child(1), th:nth-child(2), td:nth-child(1), td:nth-child(2) {
+    width: 15%;
+    text-align: left;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    text-align: right;
+}
+
+table .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+td {
+    padding: 8px 0;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #8888;
+}
+
+#modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0008;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#modal .container {
+    padding: 25px;
+    width: 400px;
+    position: relative;
+}
+
+#modal button {
+    background-color: transparent;
+    position: absolute;
+    right: 25px;
+    top:  25px;
+    border: none;
+    cursor: pointer;
+}
